@@ -4,6 +4,8 @@ if [ "x$1" = "xrun" ]; then
     if [ ! -d "$HOME/.minikube/machines/$PROJECT_NAME" ]; then
         # Initial startup
         minikube start --driver=virtualbox --profile "$PROJECT_NAME"
+        # Apply CRD for Gateway API
+        kubectl apply -f https://github.com/kubernetes-sigs/gateway-api/releases/download/v0.7.1/standard-install.yaml
     else
         # On second or subsequent startup
         minikube start --driver=virtualbox --profile "$PROJECT_NAME"
