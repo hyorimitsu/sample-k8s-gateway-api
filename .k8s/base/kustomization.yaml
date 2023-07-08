@@ -1,0 +1,5 @@
+namespace: sample-k8s-gateway-api
+resources:
+  - namespace.yaml
+  - api/deployment.yaml
+  - api/configmap.yaml
