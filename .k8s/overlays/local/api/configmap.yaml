@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: sample-k8s-gateway-api-api-config
+data:
+  BASE_URL: "/api"
+  PORT: "8080"
