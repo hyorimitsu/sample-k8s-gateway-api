@@ -2,6 +2,7 @@ resources:
   - ../../base
   - namespace.yaml
   - gateway.yaml
+  - route.yaml
 patches:
   - target:
       kind: ConfigMap
