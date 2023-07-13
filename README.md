@@ -60,9 +60,19 @@ This is a sample that uses the Gateway API to access the application instead of 
     curl -H Host:sample-k8s-gateway-api.localhost.com ${CLUSTER_IP}:8080/api/
     ```
 
-    The same results can be obtained by accessing the following in a browser.
+    By adding the cluster ip and host sets to `/etc/hosts`, you can access it from a browser as well.
 
-    http://sample-k8s-gateway-api.localhost.com:8080/api/
+    - Example of lines to add to `/etc/hosts`
+
+        The `{CLUSTER_IP}` section must be rewritten.
+
+        ```
+        {CLUSTER_IP} sample-k8s-gateway-api.localhost.com
+        ```
+
+    - URL when accessing with a browser
+
+        http://sample-k8s-gateway-api.localhost.com:8080/api/
 
 4. Stop the application in minikube
 
